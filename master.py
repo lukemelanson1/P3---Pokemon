@@ -100,7 +100,7 @@ oCharmander.heal()
 print(oCharmander.get_info())
 
 #Put the 3 Pokemon objects into a list
-lstPokemon = [oCharmander, oSquirtle, oBulbasaur]
+lstPokemon = [oBulbasaur, oCharmander, oSquirtle]
 
 #Loop through the list and print out the result of get_info on each Pokemon object in the list.
 for pokemon in lstPokemon:

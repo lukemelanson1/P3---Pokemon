@@ -38,9 +38,9 @@ class Move():
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 # Create the pokemon objects
 # Luke pt 2
-bulbasaur = Pokemon("Bulbasaur", "Grass", 60)
-charmander = Pokemon("Charmander", "Fire", 55)
-squirtle = Pokemon("Squirtle", "Water", 65)
+oBulbasaur = Pokemon("Bulbasaur", "Grass", 60)
+oCharmander = Pokemon("Charmander", "Fire", 55)
+oSquirtle = Pokemon("Squirtle", "Water", 65)
 
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 # Create the move objects
@@ -59,3 +59,49 @@ oSolar_Beam = Move("Solar Beam", "Grass", 18, 27)
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 # Run the game
 # Reece
+import random as rd
+
+#Create a list that stores each of the 9 objects in it.
+lstMoves = [oTackle, oQuick_attack, oSlash,
+            oFlamethrower, oEmber, oWater_gun,
+            oHydro_pump, oVine_whip, oSolar_Beam]
+        
+
+
+
+"""
+Do a for loop that runs 3 times, and in each iteration, do the following:
+
+Randomly select a Move object from the list you created
+
+Print out the result of the get_info method of the randomly selected object.
+Print out Generated attack value:  and then the returned value from running the generate_attack_value method 
+on the randomly selected object.
+Then delete the move from the list of moves. 
+This ensures that you won't randomly select the same move twice. 
+If you randomly select the same move twice, the automated tests won't pass."""
+for move in range(3):
+    move = rd.choice(lstMoves)
+    print(move.get_info())
+    print("Generated attack value: " + str(move.generate_attack_value()))
+    lstMoves.remove(move)
+
+input("Press enter to continue...")
+
+#---Part 2---
+#Call the get_info method on the object storing the Charmander Pokémon and print out the result
+print(oCharmander.get_info())
+
+#Then call the heal method on the same Charmander object
+oCharmander.heal()
+
+#Then call the get_info method on the same Charmander object again and print out the result 
+# (you should see that the hit_points have increased)
+print(oCharmander.get_info())
+
+#Put the 3 Pokemon objects into a list
+lstPokemon = [oCharmander, oSquirtle, oBulbasaur]
+
+#Loop through the list and print out the result of get_info on each Pokemon object in the list.
+for pokemon in lstPokemon:
+    print(pokemon.get_info())

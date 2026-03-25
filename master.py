@@ -1,4 +1,5 @@
 # Authors: Xander Green, Reece Bunnage, Luke Melanson
+# Program Description: Pokemon battle!
 
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 # Create the pokemon class

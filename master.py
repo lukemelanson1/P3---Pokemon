@@ -20,26 +20,6 @@ class Pokemon :
 # Create the move class
 # Xander pt 1
 
-
-
-
-
-
-
-
-
-#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# Create the pokemon objects
-# Luke pt 2
-bulbasaur = Pokemon("Bulbasaur", "Grass", 60)
-charmander = Pokemon("Charmander", "Fire", 55)
-squirtle = Pokemon("Squirtle", "Water", 65)
-
-#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# Create the move objects
-# Xander pt 2
-
-
 class Move():
     def __init__(self, move_name, elemental_type, low_attack_points, high_attack_points):
         self.move_name = move_name
@@ -53,6 +33,17 @@ class Move():
     def generate_attack_value(self):
         random_attack_points = rd.randrange(self.low_attack_points, self.high_attack_points + 1)
         return random_attack_points
+
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# Create the pokemon objects
+# Luke pt 2
+bulbasaur = Pokemon("Bulbasaur", "Grass", 60)
+charmander = Pokemon("Charmander", "Fire", 55)
+squirtle = Pokemon("Squirtle", "Water", 65)
+
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# Create the move objects
+# Xander pt 2
     
 oTackle = Move("Tackle", "Normal", 5, 20)
 oQuick_attack = Move("Quick Attack", "Normal", 6, 25)
@@ -63,8 +54,6 @@ oWater_gun = Move("Water Gun", "Water", 5, 15)
 oHydro_pump = Move("Hydro Pump", "Water", 20, 25)
 oVine_whip = Move("Vine Whip", "Grass", 10, 25)
 oSolar_Beam = Move("Solar Beam", "Grass", 18, 27)
-
-
 
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 # Run the game

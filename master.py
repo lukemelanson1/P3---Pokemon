@@ -29,7 +29,7 @@ class Move():
         self.high_attack_points = high_attack_points
 
     def get_info(self):
-        return f"{self.move_name} (Type: {self.elemental_type}: {self.low_attack_points} to {self.high_attack_points} Attack Points)"
+        return f"{self.move_name} (Type: {self.elemental_type}): {self.low_attack_points} to {self.high_attack_points} Attack Points"
     
     def generate_attack_value(self):
         random_attack_points = rd.randrange(self.low_attack_points, self.high_attack_points + 1)
